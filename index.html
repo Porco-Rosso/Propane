@@ -1,243 +1,87 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="images/favicon/favicon-194x194.png" sizes="194x194">
-		<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="images/favicon/manifest.json">
-		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#d56a5b">
-		<link rel="shortcut icon" href="images/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-		<meta name="msapplication-config" content="images/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#444444">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Propane">
+    <meta name="author" content="">
+<!--    <link rel="icon" href="../../favicon.ico">-->
 
-    <title>Butane</title>
+    <title>Propane</title>
 
-    
-<!--    Google Analytics tracking-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-40366366-1', 'auto');
-  ga('send', 'pageview');
-</script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
+				<link rel="stylesheet" href="css/flatly.min.css">
+		<link rel="stylesheet" href="css/style.css">
 
-    <!-- drawer css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/2.4.0/css/drawer.min.css">
-    
-    <!-- Main CSS-->
-        <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <!-- jquery-ui -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-        <!-- font-awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <!-- fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Raleway:400,700" type="text/css">
-        <!-- tooltips -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/hint.css/1.3.2/hint.min.css">
-	
-		<!--	Animatecss.js-->
-	<link rel="stylesheet" href="css/animate.css">
-	
-        <!--jplayer -->
-    <link href="js/jplayer-custom/skin/jplayer.Butane-theme.css" rel="stylesheet" type="text/css" />
-        <!--particle.js css -->
-    <link rel="stylesheet" media="screen" href="css/particlesjs.css">
-    
-    <!-- Butane css-->
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-    
-<body class="drawer drawer-right">
-    <div class="navbar navbar-default navbar-fixed-top hidden-on-load">
-        <div class="container" role="banner">
-            <div class="navbar-header">
-                <a class="navbar-brand" id="navbar-brand" onclick="window.scrollTo(0, 0);">
-                    <span><img class="logo-image" src="images/Logo.png"></span><span class="logo-text">Butane</span><span class="logo-subtext nomobile"> Fire from your web pipes</span>
-                </a>
-                    <label class="switch">
-                        <i class="icon-ok"></i>
-                        <i class="icon-remove"></i>
-                        <input type="checkbox" checked>
-                    </label>
-                <span id="info-button" class="nomobile"><span class="glyphicon glyphicon-info-sign" ></span><span id="info-button-text">Instructions</span></span>
-            </div>
-            
-<!--            Start of drawer code-->
-            <div class="drawer-header nomobile">
-                <button type="button" class="drawer-toggle drawer-hamburger">
-                    <span class="sr-only">toggle navigation</span>
-                    <span class="drawer-hamburger-icon"></span>
-                </button>
-            </div>
+		
+  </head>
 
+  <body>
+		<div id="colorcontainer">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Propane</a>
         </div>
-    </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
+    <div class="container content">
 
-    <div class="drawer-main drawer-default">
-        <nav class="drawer-nav" role="navigation">
-            <div class="drawer-brand">Playlist Manager
-            </div>
-
-            <ul class="drawer-menu">
-                <li class="drawer-menu-item">Save your playlist</li>
-            </ul>
-
-            <!--
-The Playlist loader               
-                
--->
-            <div id="save-buttons">
-                        <input id="inputFileNameToSaveAs" class="form-control" placeholder="Filename to Save As...">
-                    
-                        <button onclick="saveTextAsFile()" class="btn btn-primary playlistloadbutton hint--bottom hint--rounded" data-hint="Nice mixtape, fam">Save Playlist to File</button>                    
-                    <li id="loadmixtape" class="drawer-menu-item">Load your mixtape</li>                        
-                    
-                        <input class="fileselector" type="file" id="fileToLoad">
-                    
-                        <button onclick="loadFileAsText()" class="btn btn-primary playlistloadbutton hint--bottom hint--rounded" data-hint="Load FIRE">Load File</button>
-                       
-                <div id="playlistoutput">
-                    <textarea disabled id="inputTextToSave"></textarea>
-                </div>
-            </div>
-            <!--
-END The PLaylist loader               
-                
--->
-           <div class="drawer-footer"><span></span>
-            </div>
-        </nav>
-    </div>
-
-    <div class="drawer-overlay">
-        <!-- content -->
-    </div>
-    
-<!--    End of drawer code -->
-    
-<!--Playlist and Player code    -->
-    <div class="wrapper hidden-on-load">
-        <div class="container" id="wrapper-container">
-            <div class="col-xs-12">
-
-
-                <div class="list-group" id="playlist">
-                    <div class="list-group-item" id="playlist-list-item">
-<!--Start of Jplayer -->
-                        <div class="player-container">
-                        	<div id="jquery_jplayer_1" class="jp-jplayer">
-                        <audio id="jp_audio_0" class="navbar-audio" preload="auto" src=""></audio>
-                            </div>
-	<div id="jp_container_1" class="jp-audio">
-		<div class="jp-controls">
-			<a class="jp-play"><i class="fa fa-play"></i></a>
-			<a class="jp-pause"><i class="fa fa-pause"></i></a>
-		</div>
-		<div class="jp-progress">
-            <div class="jp-buffer-bar"></div>
-			<div class="jp-seek-bar">
-				<div class="jp-play-bar">
-				</div>
+<div class="well well-lg">
+		<div id="viddiv" class="embed-responsive embed-responsive-16by9 hidden">
+  <iframe id="vidframe" class="embed-responsive-item"></iframe>
 			</div>
-			<div class="jp-current-time"></div>
 		</div>
-		<div class="jp-no-solution">
-			Media Player Error<br>
-			Update your browser or Flash plugin
-		</div>
-	</div>
-                            </div>
-<!--End of Jplayer -->
-                        <br>
-
-                        <ul id="playlist-item" class="fa-ul fa sortable">
-                        </ul>
-
-                        <button id="clear-button" class="btn">clear playlist</button>
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <input id="query" type="text" class="form-control" autofocus placeholder="Search for a song...">
-                    <span class="input-group-btn">
-						<button class="btn btn-primary search" type="button"><span class="glyphicon glyphicon-search"></span>
-                    </button>
-                    </span>
-                </div>
-
-<!--End of Player and playlist code-->
-
-
-
-<!--Results-->
-                <div id="result">
+			
+			
+<div class="input-group">
+      <input id="query" type="text" class="form-control" autofocus placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default search" type="button">Search</button>
+      </span>
+    </div><!-- /input-group -->
+						
+			<div id="result">
                     <h2 id="loading" style="display:none" class="text-center"><span class="glyphicon glyphicon-refresh spin"></span></h2>
                     <br>
                     <div class="list-group"></div>
                 </div>
-            </div>
-        </div>
-    </div>
-    
-<!--End of Results-->
-    
-<!--Footer    -->
+
+    </div><!-- /.container -->
+		
+		<!--Footer    -->
     <div id="footer" class="hidden-on-load">
         <div class="container">
-            <p class="muted credit text-center">Developed by <a href="https://github.com/Porco-Rosso" class="hint--top hint--rounded" data-hint="🐷 Github">Porco-Rosso</a> @ <a href="http://stereostance.com" target="_blank" class="hint--top hint--rounded" data-hint="🏎 + ♪" >Stereostance.com</a><span class="nomobile"> - Version <a href="https://github.com/Porco-Rosso/Butane" class="hint--top hint--rounded" data-hint="See the code!">3.1.3 <i class="fa fa-github"></i></a> - <a href="https://github.com/Porco-Rosso/Butane-userscript" class="hint--top hint--rounded" data-hint="Get the userscript!"><i class="fa fa-code"></i></a> - based on code from <a href="https://github.com/alashow/music" target="_blank" class="hint--top hint--rounded" data-hint="Thanks!">Alashow</a></span>
+            <p class="muted credit text-center">Developed by <a href="https://github.com/Porco-Rosso" class="hint--top hint--rounded" data-hint="🐷 Github">Porco-Rosso</a><span class="nomobile"> - Version <a href="https://github.com/Porco-Rosso/Propane" class="hint--top hint--rounded" data-hint="See the code!">0.1.0 <i class="fa fa-github"></i></a></span>
             </p>
         </div>
     </div>
-
-<!--End of Footer-->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="js/bootbox.min.js"></script>    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-    <!-- jquery & iscroll & dropdown (for drawer)-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
-    <script src="https://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/2.4.0/js/jquery.drawer.min.js"></script>
-    
-    <!-- jplayer -->
-    <script type="text/javascript" src="js/jplayer-custom/js/jquery.jplayer.min.js"></script>
-    
-    <!-- Playlist manager JS-->
-    <script src="js/playlist-saver.js"></script>
-    
-    <!--  Switch Javascript-->
-    <script src="js/switch.js"></script>
-	
-	<!--  Animate page load-->
-	<script src="js/pageloadanimation.js" type="text/javascript" charset="utf-8"></script>
-    
-    <!-- Main JS files   -->
-	<script src="js/urlplaylistloader.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+		
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 
 <!--Capthcha code-->
     <div class="modal fade" id="captchaModal">
@@ -252,9 +96,6 @@ END The PLaylist loader
         </div>
     </div>
 <!--End of Captcha code -->
-    
-
-
-</body>
-
+		</div>
+  </body>
 </html>

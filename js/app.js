@@ -26,7 +26,7 @@ $(document).ready(function ($) {
 //		adult:0,
 		autoComplete: 0,
 		accessToken: "95effcf84390a18dc1ce1a039e3bc8e0cfd3b5f973f93f90cf8279d1b8085758fbe1ebe85fe2011e59d39", // Video Token 
-		count: 199
+		count: 10
 	};
 	window.vkConfig = vkConfig;
 
@@ -37,6 +37,13 @@ $(document).ready(function ($) {
 			return; // return if query empty
 						};
 		search(query, null, null);
+	});
+	
+	//Trigger search button when pressing enter button
+	$('#query').bind('keypress', function (event) {
+		if (event.keyCode == 13) {
+			$('.search').trigger('click');
+		}
 	});
 
 
@@ -118,14 +125,23 @@ $(document).ready(function ($) {
 					var duration = msg.response[i].duration.toTime();					
 
 					var savebutton = '<span class="badge download hint--top hint--rounded nomobile" data-hint="Save as ..."><a class="glyphicon glyphicon-cloud-download" href="' + url + '" download="'+ title + '.mp3"></a></span>';
-					var length = '<span class="badge hint--top hint--rounded nomobile" data-hint="Song length">' + duration + '</span>';
+					var length = '<span class="badge hint--top hint--rounded nomobile" data-hint="length">' + duration + '</span>';
 					
-					var link = '<a class="song" data-title="'+ title +'" data-duration="' + duration + '" data-url="'+ url +'">'+ title +'</a>';
+					var link = '<a class="video" data-title="'+ title +'" data-duration="' + duration + '" data-url="'+ url +'">'+ title +'</a>';
 					
 					$('#result > .list-group').append('<li class="list-group-item">'+link+savebutton+length+'</li>');
 					
 				}
 				$('#loading').hide();
+				
+					$('a.video').click(function() {
+   				var video = $(this).attr('data-url');
+	 				console.log(video);
+					$('#vidframe').attr("src", video);
+					$('#viddiv').removeClass('hidden');
+					
+					});
+	
 
 			}
 		});
@@ -182,9 +198,6 @@ $(document).ready(function ($) {
 	}
 
 });
-
-
-
 
 // end of on document script  
 
