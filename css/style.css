@@ -21,6 +21,7 @@ body {
 	position: fixed;
 	background-color: #37373e;
   width: 100%;
+	overflow: scroll;
 }
 
 a {
@@ -76,10 +77,10 @@ a:hover, a:focus {
 
 #footer{
 	  bottom: 0px;
-    position: fixed;
     width: 100%;
 	background-color: #29292f;
 		color: #7b7b7b;
+	position:fixed;
 }
 
 #footer p {

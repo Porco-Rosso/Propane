@@ -22,11 +22,11 @@ $(document).ready(function ($) {
 	var vkConfig = {
 		url: "https://api.vk.com/method/video.search",
 		sort: 2,
-//		hd:0,
-//		adult:0,
+		hd:0,
+		adult:0,
 		autoComplete: 0,
 		accessToken: "95effcf84390a18dc1ce1a039e3bc8e0cfd3b5f973f93f90cf8279d1b8085758fbe1ebe85fe2011e59d39", // Video Token 
-		count: 10
+		count: 100
 	};
 	window.vkConfig = vkConfig;
 
